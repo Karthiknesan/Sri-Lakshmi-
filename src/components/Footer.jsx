@@ -11,7 +11,7 @@ function Footer() {
             <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.8rem', color: 'var(--brand-green)', marginBottom: '1rem', background: '#FFF', padding: '0.5rem', borderRadius: '4px', display: 'inline-block' }}>Sri Lakshmi <span style={{color: 'var(--brand-gold)'}}>Traders</span></h3>
           </Link>
           <p className="footer-desc">
-            Premium suppliers of the highest grade Black Pepper and Green Cardamom. From farm to local markets within Krishnagiri, we ensure excellence in every spice.
+            Best suppliers of Black Pepper and Green Cardamom. We bring fresh spices directly from the farms to businesses in Krishnagiri.
           </p>
         </div>
         
@@ -28,7 +28,7 @@ function Footer() {
         <div className="footer-col">
           <h4>Contact Us</h4>
           <ul className="contact-info">
-            <li><MapPin size={18} className="text-gold" /> <span>Mumbai, Maharashtra, India</span></li>
+            <li><MapPin size={18} className="text-gold" /> <span>Kaveripattinam, Krishnagiri</span></li>
             <li><Phone size={18} className="text-gold" /> <span>+91 9876543210</span></li>
             <li><Mail size={18} className="text-gold" /> <span>exports@srilakshmitraders.com</span></li>
           </ul>

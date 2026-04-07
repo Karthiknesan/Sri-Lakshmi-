@@ -8,12 +8,12 @@
   --text-primary: #333333;
   --text-secondary: #555555;
   
-  --brand-green: #2E7D32; /* Rich Cardamom Green */
-  --brand-green-hover: #1B5E20;
-  --brand-gold: #F1C40F; /* Enquire / Accent */
-  --brand-gold-hover: #D4AC0D;
+  --brand-green: #218c39; /* Vibrant Green */
+  --brand-green-hover: #176628;
+  --brand-gold: #F5B041; /* Premium Gold */
+  --brand-gold-hover: #D68910;
   
-  --border-color: #EAEAEA;
+  --border-color: #E2E8F0;
 
   /* Typography */
   --font-heading: 'Playfair Display', serif;
@@ -28,7 +28,7 @@
 
 body {
   font-family: var(--font-body);
-  background-color: var(--bg-primary);
+  background: linear-gradient(135deg, #FFFFFF 0%, #FAFAFA 100%);
   color: var(--text-primary);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -77,44 +77,51 @@ ul {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  border-radius: 4px; /* Crisp square-ish corners */
+  border-radius: 8px; /* Softer radius */
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   border: none;
   font-size: 0.95rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 .btn-primary {
-  background-color: var(--brand-green);
+  background: linear-gradient(to right, var(--brand-green), #1b732d);
   color: #FFFFFF;
 }
 
 .btn-primary:hover {
-  background-color: var(--brand-green-hover);
+  background: linear-gradient(to right, var(--brand-green-hover), #11501e);
 }
 
 .btn-gold {
-  background-color: var(--brand-gold);
+  background: linear-gradient(to right, #F8C471, var(--brand-gold));
   color: #111;
 }
 
 .btn-gold:hover {
-  background-color: var(--brand-gold-hover);
+  background: linear-gradient(to right, #F5B041, var(--brand-gold-hover));
 }
 
 /* Corporate Card structure instead of glassmorphism */
 .corp-card {
   background: #FFFFFF;
   border: 1px solid var(--border-color);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Subtle crisp shadow */
-  border-radius: 4px;
-  padding: 2rem;
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  border-radius: 12px;
+  padding: 2.5rem;
+  transition: all 0.3s ease;
 }
 
 .corp-card:hover {
   border-color: var(--brand-green);
-  box-shadow: 0 8px 20px rgba(46, 125, 50, 0.1);
+  box-shadow: 0 20px 40px rgba(46, 125, 50, 0.08);
+  transform: translateY(-4px);
 }
 
 /* Global Responsive Layout Classes */

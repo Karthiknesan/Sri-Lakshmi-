@@ -23,20 +23,19 @@ function Contact() {
           </form>
         </div>
         
-        {/* Contact Address */}
         <div className="corp-card contact-card">
-          <h3 className="contact-heading">Corporate Headquarters</h3>
+          <h3 className="contact-heading">Our Contact Details</h3>
           <div className="address-block-wrapper">
             <div className="address-block">
-              <strong className="address-title">Registered Address:</strong>
-              <p className="text-secondary">Sri Lakshmi Traders<br/>Jaswanti Allied Business Centre<br/>Mumbai, Maharashtra, India 400064</p>
+              <strong className="address-title">Our Office:</strong>
+              <p className="text-secondary">Sri Lakshmi Traders<br/>Kaveripattinam<br/>Krishnagiri, Tamil Nadu</p>
             </div>
             <div className="address-block">
-              <strong className="address-title">Phone Numbers:</strong>
+              <strong className="address-title">Call Us:</strong>
               <p className="text-secondary">+91 98203 23370<br/>+91 22670 86439</p>
             </div>
             <div className="address-block">
-              <strong className="address-title">Email Addresses:</strong>
+              <strong className="address-title">Email:</strong>
               <p className="text-secondary">exports@srilakshmitraders.com<br/>info@srilakshmitraders.com</p>
             </div>
           </div>
