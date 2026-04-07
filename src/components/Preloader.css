@@ -1,0 +1,66 @@
+.preloader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  pointer-events: none; /* Let the container block clicks until gone, except it covers everything so we set pointer-events:all when active */
+}
+
+.curtain {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background-color: #FFFFFF; /* Bright white curtains */
+  z-index: 10000;
+  box-shadow: inset 0 0 50px rgba(0,0,0,0.05); /* Lighter shadow for bright theme */
+}
+
+.left-curtain {
+  left: 0;
+  border-right: 1px solid rgba(212, 175, 55, 0.2); /* Subtle gold edge */
+}
+
+.right-curtain {
+  right: 0;
+  border-left: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.preloader-logo-wrapper {
+  position: relative;
+  z-index: 10001; /* Above the curtains */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.preloader-logo {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 2px;
+  margin: 0;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.preloader-line {
+  margin-top: 15px;
+  width: 60px;
+  height: 2px;
+  background-color: var(--accent-gold);
+  box-shadow: 0 0 10px var(--accent-gold);
+}
+
+@media (max-width: 768px) {
+  .preloader-logo {
+    font-size: 2rem;
+  }
+}

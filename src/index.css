@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
+
+:root {
+  /* Colors - Corporate Theme */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F8F9FA;
+  
+  --text-primary: #333333;
+  --text-secondary: #555555;
+  
+  --brand-green: #2E7D32; /* Rich Cardamom Green */
+  --brand-green-hover: #1B5E20;
+  --brand-gold: #F1C40F; /* Enquire / Accent */
+  --brand-gold-hover: #D4AC0D;
+  
+  --border-color: #EAEAEA;
+
+  /* Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Open Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Base Styles */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Utilities */
+.text-green { color: var(--brand-green); }
+.text-gold { color: var(--brand-gold); }
+.text-center { text-align: center; }
+
+.bg-light { background-color: var(--bg-secondary); }
+
+/* Buttons Corporate */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.8rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 4px; /* Crisp square-ish corners */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  font-size: 0.95rem;
+}
+
+.btn-primary {
+  background-color: var(--brand-green);
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  background-color: var(--brand-green-hover);
+}
+
+.btn-gold {
+  background-color: var(--brand-gold);
+  color: #111;
+}
+
+.btn-gold:hover {
+  background-color: var(--brand-gold-hover);
+}
+
+/* Corporate Card structure instead of glassmorphism */
+.corp-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Subtle crisp shadow */
+  border-radius: 4px;
+  padding: 2rem;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.corp-card:hover {
+  border-color: var(--brand-green);
+  box-shadow: 0 8px 20px rgba(46, 125, 50, 0.1);
+}
