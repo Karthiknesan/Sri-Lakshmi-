@@ -7,11 +7,11 @@ function Footer() {
     <footer className="footer">
       <div className="container footer-container">
         <div className="footer-col">
-          <Link to="/">
-            <img src="/logo.jpeg" alt="Sri Lakshmi Traders Logo" className="footer-brand-logo" />
+          <Link to="/" style={{ textDecoration: 'none' }}>
+            <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.8rem', color: 'var(--brand-green)', marginBottom: '1rem', background: '#FFF', padding: '0.5rem', borderRadius: '4px', display: 'inline-block' }}>Sri Lakshmi <span style={{color: 'var(--brand-gold)'}}>Traders</span></h3>
           </Link>
           <p className="footer-desc">
-            Premium suppliers of the highest grade Black Pepper and Green Cardamom. From farm to global markets, we ensure excellence in every spice.
+            Premium suppliers of the highest grade Black Pepper and Green Cardamom. From farm to local markets within Krishnagiri, we ensure excellence in every spice.
           </p>
         </div>
         

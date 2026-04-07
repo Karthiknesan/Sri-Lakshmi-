@@ -10,7 +10,11 @@ function Navbar() {
     <header className="header">
       {/* Main Nav */}
       <nav className="navbar">
-        <div className="container nav-container" style={{ justifyContent: 'flex-end' }}>
+        <div className="container nav-container" style={{ justifyContent: 'space-between' }}>
+          <Link to="/" className="nav-logo" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+            <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.6rem', fontWeight: 700, color: 'var(--brand-green)' }}>Sri Lakshmi <span style={{color: 'var(--brand-gold)'}}>Traders</span></span>
+          </Link>
+
           {/* Desktop Menu */}
           <ul className="nav-links">
             <li><Link to="/">Home</Link></li>

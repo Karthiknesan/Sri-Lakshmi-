@@ -59,7 +59,9 @@ function Preloader() {
       <div className="curtain right-curtain" ref={rightCurtainRef}></div>
       
       <div className="preloader-logo-wrapper" ref={logoRef}>
-        <img src="/logo.jpeg" alt="Sri Lakshmi Traders Logo" className="preloader-logo-img" />
+        <h1 className="preloader-logo" style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(2.5rem, 5vw, 5rem)', fontWeight: 700, color: '#1B5E20', filter: 'drop-shadow(0 4px 10px rgba(0,0,0,0.1))', margin: 0 }}>
+          Sri Lakshmi <span style={{color: '#F1C40F'}}>Traders</span>
+        </h1>
         <div className="preloader-line"></div>
       </div>
     </div>

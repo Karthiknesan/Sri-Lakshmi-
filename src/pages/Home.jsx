@@ -10,11 +10,11 @@ function Home() {
         <div className="container hero-container">
           <div className="hero-text animate-fade-in">
             <h1>
-              Global Suppliers of <br />
+              Local Suppliers within Krishnagiri of <br />
               <span className="text-green">Premium Indian Spices</span>
             </h1>
             <p>
-              Delivering the finest grades of Black Pepper and Green Cardamom across the globe. From estate to export, ensuring unmatched quality and purity.
+              Delivering the finest grades of Black Pepper and Green Cardamom across the Krishnagiri Region. From estate to export, ensuring unmatched quality and purity.
             </p>
             <div className="hero-actions">
               <Link to="/products" className="btn btn-primary">
@@ -36,7 +36,7 @@ function Home() {
         <div className="container">
           <div className="section-header text-center">
             <h2 className="section-title">Our Premium Product Range</h2>
-            <p className="section-subtitle">Specialized processing and grading for specific global market demands.</p>
+            <p className="section-subtitle">Specialized processing and grading for specific local market demands within Krishnagiri.</p>
           </div>
           
           <div className="catalog-grid">
@@ -91,8 +91,8 @@ function Home() {
             
             <div className="feature-block text-center">
               <Globe className="feature-icon text-green" size={48} />
-              <h4>Global Scale</h4>
-              <p className="text-secondary">Trusted wholesale supplier to North America, Europe, and the Middle East.</p>
+              <h4>Local Krishnagiri Reach</h4>
+              <p className="text-secondary">Trusted wholesale supplier within Krishnagiri district.</p>
             </div>
           </div>
         </div>
