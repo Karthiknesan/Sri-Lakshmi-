@@ -10,11 +10,7 @@ function Navbar() {
     <header className="header">
       {/* Main Nav */}
       <nav className="navbar">
-        <div className="container nav-container">
-          <Link to="/" className="nav-logo" style={{ display: 'flex', alignItems: 'center' }}>
-            <img src="/logo.jpeg" alt="Sri Lakshmi Traders Logo" className="brand-logo" />
-          </Link>
-
+        <div className="container nav-container" style={{ justifyContent: 'flex-end' }}>
           {/* Desktop Menu */}
           <ul className="nav-links">
             <li><Link to="/">Home</Link></li>
