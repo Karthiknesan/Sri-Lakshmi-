@@ -116,3 +116,43 @@ ul {
   border-color: var(--brand-green);
   box-shadow: 0 8px 20px rgba(46, 125, 50, 0.1);
 }
+
+/* Global Responsive Layout Classes */
+.page-section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.page-spacing {
+  margin-bottom: 3rem;
+}
+
+.page-min-height {
+  min-height: 60vh;
+}
+
+.body-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.about-card {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .page-section {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+  .page-spacing {
+    margin-bottom: 1.5rem;
+  }
+  h1, .section-title {
+    font-size: 1.8rem;
+  }
+}
