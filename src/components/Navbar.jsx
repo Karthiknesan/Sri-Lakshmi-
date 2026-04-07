@@ -8,25 +8,11 @@ function Navbar() {
 
   return (
     <header className="header">
-      {/* Top Bar for Contact Info */}
-      <div className="top-bar">
-        <div className="container top-bar-container">
-          <div className="top-contact">
-            <span><Phone size={14} /> +91 98203 23370</span>
-            <span><Mail size={14} /> exports@srilakshmitraders.com</span>
-          </div>
-          <div className="top-links">
-            <Link to="/about">Global Export Guidelines</Link>
-            <Link to="/contact">Request a Sample</Link>
-          </div>
-        </div>
-      </div>
-
       {/* Main Nav */}
       <nav className="navbar">
         <div className="container nav-container">
           <Link to="/" className="nav-logo" style={{ display: 'flex', alignItems: 'center' }}>
-            <img src="/logo.jpeg" alt="Sri Lakshmi Traders Logo" style={{ height: '120px', width: 'auto', objectFit: 'contain' }} />
+            <img src="/logo.jpeg" alt="Sri Lakshmi Traders Logo" className="brand-logo" />
           </Link>
 
           {/* Desktop Menu */}
