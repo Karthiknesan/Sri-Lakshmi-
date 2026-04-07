@@ -1,14 +1,63 @@
+import { useEffect, useRef } from 'react'
 import { ArrowRight, Star, ShieldCheck, Globe } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './Home.css'
 
+gsap.registerPlugin(ScrollTrigger)
+
 function Home() {
+  const heroRef = useRef(null)
+  const featuresRef = useRef(null)
+  const featureBlocksRef = useRef([])
+
+  useEffect(() => {
+    // 1. Hero Entrance Animation
+    if (heroRef.current) {
+      gsap.fromTo(heroRef.current.children, 
+        { y: 40, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1, stagger: 0.2, ease: "power3.out", delay: 0.1 }
+      )
+    }
+
+    // 2. Catalog Cards Scroll Animation
+    const cards = gsap.utils.toArray('.catalog-card')
+    cards.forEach(card => {
+      gsap.fromTo(card, 
+        { y: 60, opacity: 0 },
+        { 
+          y: 0, opacity: 1, duration: 1, ease: "power3.out",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 85%", // trigger when top of card hits 85% down viewport
+            toggleActions: "play none none none"
+          }
+        }
+      )
+    })
+
+    // 3. Features Stagger Animation
+    if (featuresRef.current && featureBlocksRef.current.length > 0) {
+      gsap.fromTo(featureBlocksRef.current,
+        { y: 50, opacity: 0 },
+        { 
+          y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: "power3.out",
+          scrollTrigger: {
+            trigger: featuresRef.current,
+            start: "top 80%",
+          }
+        }
+      )
+    }
+  }, [])
+
   return (
     <div className="home">
       {/* Hero Section */}
       <section className="corporate-hero">
-        <div className="container hero-container">
-          <div className="hero-text animate-fade-in">
+        <div className="container hero-container" ref={heroRef}>
+          <div className="hero-text">
             <h1>
               Best Quality Spices from <br />
               <span className="text-green">Krishnagiri</span>
@@ -70,26 +119,26 @@ function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="why-us section-padding">
+      <section className="why-us section-padding" ref={featuresRef}>
         <div className="container">
           <div className="section-header text-center">
             <h2 className="section-title text-green">Why Partner With Us?</h2>
           </div>
 
           <div className="features-grid">
-            <div className="feature-block text-center">
+            <div className="feature-block text-center" ref={el => featureBlocksRef.current[0] = el}>
               <Star className="feature-icon text-green" size={48} />
               <h4>Top Quality</h4>
               <p className="text-secondary">Strict cleaning and grading gives you the very best spices.</p>
             </div>
             
-            <div className="feature-block text-center">
+            <div className="feature-block text-center" ref={el => featureBlocksRef.current[1] = el}>
               <ShieldCheck className="feature-icon text-green" size={48} />
               <h4>Safe Packaging</h4>
               <p className="text-secondary">We use special boxes to keep the fresh smell inside.</p>
             </div>
             
-            <div className="feature-block text-center">
+            <div className="feature-block text-center" ref={el => featureBlocksRef.current[2] = el}>
               <Globe className="feature-icon text-green" size={48} />
               <h4>Local Supply</h4>
               <p className="text-secondary">Trusted by top businesses all around Krishnagiri.</p>
